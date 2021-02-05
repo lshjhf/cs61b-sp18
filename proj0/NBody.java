@@ -1,5 +1,5 @@
 public class NBody {
-public static String starField="./images/starfield.jpg";
+private static String starField="./images/starfield.jpg";
     public static double readRadius(String path){
         In in= new In(path);
         int numPlanets = in.readInt();
@@ -11,7 +11,7 @@ public static String starField="./images/starfield.jpg";
         int universesize=in.readInt();
         Planet[] planets=new Planet[universesize];
         for(int i =0;i<universesize;i++){
-            planets[i]=new Planet();
+            planets[i]=new Planet ();
         }
         in.readDouble();
         int j=0;
