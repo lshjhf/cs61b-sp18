@@ -98,8 +98,12 @@ public class IntList {
      * * elements of B.  May NOT modify items of A.  Use 'new'.
      */
     public static IntList catenate(IntList A, IntList B) {
-        IntList newlista =new IntList();
-        IntList newlistb =new IntList();
+        if(A == null){
+            return new IntList(B.first, B.rest);
+        }
+        return new IntList(A.first, catenate( A.rest, B ));
+    }
+        /** IntList newlista =new IntList();
         IntList p=A;
         IntList p2=newlista;
         newlista.first=p.first;
@@ -117,8 +121,8 @@ public class IntList {
             p=p.rest;
         }
         newlista.first=p.first;
-        return p2;
-    }
+        return p2;*/
+
 
 
 
